@@ -43,7 +43,11 @@ function LastUpdatedByUser({ lastUpdatedBy }: { lastUpdatedBy: string }): JSX.El
       description="The words used to describe by who the page has been last updated"
       values={{
         // user: <b>{lastUpdatedBy}</b>,
-        user: <b><Link to={"https://github.com/" + lastUpdatedBy}>{lastUpdatedBy}</Link></b>,
+        user: (
+          <b>
+            <Link to={"https://github.com/" + lastUpdatedBy}>{lastUpdatedBy}</Link>
+          </b>
+        ),
       }}
     >
       {" by {user}"}
@@ -57,7 +61,13 @@ function LastCommitIn({ lastCommitIn }: { lastCommitIn: string }): JSX.Element {
       id="theme.lastUpdated.inCommit"
       description="The words used to describe in what commit was used"
       values={{
-        commit: <b><Link to={"https://github.com/PaperMC/docs/commit/" + lastCommitIn}>{lastCommitIn}</Link></b>,
+        commit: (
+          <b>
+            <Link to={"https://github.com/PaperMC/docs/commit/" + lastCommitIn}>
+              {lastCommitIn}
+            </Link>
+          </b>
+        ),
       }}
     >
       {" in {commit}"}
